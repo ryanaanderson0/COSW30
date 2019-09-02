@@ -29,7 +29,7 @@
     </head>
     <body>
         <h1>Hi, I'm Ryan Anderson!</h1>
-        <p>Hello everyone, my name is Ryan Anderson. I am a second year Web Development student at LBCC. I am an avid gamer (Overwatch, anything on the Switch), horror film buff, and all around foodie. I currently work as a kitchen manager for a wood fired pizza catering company, hoping to switch careers to Web Developmentt. </p>
+        <p>Hello everyone, my name is Ryan Anderson. I am a second year Web Development student at LBCC. I am an avid gamer (Overwatch, anything on the Switch), horror film buff, and all around foodie. I currently work as a kitchen manager for a wood fired pizza catering company, hoping to switch careers to Web Development. </p>
     
         <p>Some other hobbies I have are:</p>
         
