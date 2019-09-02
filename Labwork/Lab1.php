@@ -1,22 +1,27 @@
 <!doctype html>
 <html>
     <head>
-         <title>My First PHP Page!</title>
+         <title>Labwork 1:Hello World</title>
     </head>
     <body>
-        <p>Chocolate bar ice cream cotton candy carrot cake wafer bonbon sweet roll. Croissant gingerbread cake marzipan. Candy canes sweet roll chocolate cake. Halvah fruitcake candy oat cake gingerbread.
-
-Marzipan ice cream powder jujubes muffin cheesecake cupcake caramels. Ice cream biscuit jelly-o dragée lemon drops chupa chups. Cookie cookie candy canes.
-
-Donut gingerbread sesame snaps macaroon caramels tart oat cake. Powder dragée jujubes sugar plum cake topping powder soufflé. Halvah pastry marzipan chocolate bar sugar plum.
-
-Muffin oat cake liquorice macaroon dragée carrot cake brownie ice cream. Liquorice candy bear claw lollipop cake jelly-o pie gummi bears tootsie roll. Sweet roll powder powder brownie oat cake lemon drops soufflé gummies gummies.
-
-Fruitcake cheesecake brownie tiramisu. Jujubes macaroon tart tart sweet roll pie. Cupcake bonbon fruitcake dessert sweet tiramisu powder macaroon jelly beans. Pie soufflé cheesecake marzipan donut candy gummi bears gummi bears. </p>
+        <h1>Hi, I'm Ryan Anderson!</h1>
+        <p>Hello everyone, my name is Ryan Anderson. I am a second year Web Developmen student at LBCC. I am an avid gamer (Overwatch, anything on the switch), horror film buff, and all around foodie. I currently work as a kitchen manager for a wood fired pizza catering company, hoping to switch careers to Web Developemnt. </p>
     
+        <p>Some other hobbies I have are:</p>
+        
+        <ul>
+            <li>Bread baking</li>
+            <li>Tennis</li>
+            <li>Violin</li>
+            <li>Vintage Cars</li>
+        </ul>
     
     <?php
-        echo'This is my PHP beautiful cupcake paragraph'
+        echo"<p>Two of the websites I most frequent are <a href='http://www.theawesomer.com'> and <a href='http://www.craigslist.com'> </p>"
+        /*lab1.php
+        Ryan Anderson
+        09/01/19*/
+        
     ?>
     
     </body>
