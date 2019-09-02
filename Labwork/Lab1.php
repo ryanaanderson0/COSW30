@@ -3,8 +3,8 @@
     <head>
          <title>Labwork 1:Hello World</title>
          <style>
-             li{
-                 font: bold;
+             p{
+                 color: red;
              }
          </style>
     </head>
