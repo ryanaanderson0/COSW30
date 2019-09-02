@@ -2,6 +2,11 @@
 <html>
     <head>
          <title>Labwork 1:Hello World</title>
+         <style>
+             li{
+                 font: bold;
+             }
+         </style>
     </head>
     <body>
         <h1>Hi, I'm Ryan Anderson!</h1>
@@ -17,7 +22,7 @@
         </ul>
     
     <?php
-        echo"<p>Two of the websites I most frequent are <a href='http://www.theawesomer.com'> and <a href='http://www.craigslist.com'> </p>"
+        echo"<p>Two of the websites I most frequent are <a href='http://www.theawesomer.com'>TheAwesomer</a> and <a href='http://www.craigslist.com'> Craigslist</p>"
         /*lab1.php
         Ryan Anderson
         09/01/19*/
