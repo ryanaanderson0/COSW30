@@ -8,7 +8,7 @@
     $gender = $_POST ['gender'];
     $first_name = $_POST ['first_name'];
     $age = $_POST ['age'];
-    $interests = $_POST ['interests'];
+    $interest = $_POST ['interests'];
     $quantity = $_POST ['quantity'];
     $mailing_list = $_POST ['mailing_list'];
     
