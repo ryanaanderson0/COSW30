@@ -8,7 +8,7 @@
     $gender = $_POST ['gender'];
     $first_name = $_POST ['first_name'];
     $age = $_POST ['age'];
-    $interests= $_POST ['interests'];
+    $interests = $_POST ['interests'];
     $quantity = $_POST ['quantity'];
     $mailing_list = $_POST ['mailing_list'];
     
@@ -18,8 +18,8 @@
     echo " Last name: $last_name <br>";
     echo " Email: $email <br> ";
     echo " Gender: $gender <br> ";
-    echo " Age: $age <br> ";
-    echo " Interests: $interest1 $interest2 $interest3 $interest4 $interest5 <br> ";
+    echo " Age: $age1 $age2 $age3 <br> ";
+    echo " Interests: $interest <br> ";
     echo " Contribution: $quantity<br> ";
     echo " Mailing list: $mailing_list <br> ";
     
