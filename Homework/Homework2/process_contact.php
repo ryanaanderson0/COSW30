@@ -16,11 +16,11 @@
     
     
     echo "<h1> Thank you $first_name for completing the survey! This is the data you gave us: </h1> <br>";
-    echo " First name: $first_name <br>";
-    echo " Last name: $last_name <br>";
+    echo " First name: $first_name <br><br>";
+    echo " Last name: $last_name <br><br>";
     echo " Email: $email <br> ";
     echo " Gender: $gender <br> ";
-    print_r($age);
+    echo " Age: $age";
     echo " Interests: $interest <br> ";
     echo " Contribution: $quantity<br> ";
     echo " Mailing list: $mailing_list <br> ";
