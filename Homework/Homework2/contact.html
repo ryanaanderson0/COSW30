@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>Homework 2:Political Campaign Supporter Form</title>
+    </head>
+    <body>
+        <h1>Political Campaign Supporter Form</h1>
+        
+        <form method="POST" action="process_contact.php">
+            
+        <label>First Name</label>
+        <input type="text" id="first_name" name="first_name" required>
+        
+        <label>Last Name</label>
+        <input type="text" id="last_name" name="last_name" required>
+        
+        <label>Email Address</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label>Gender</label>
+        <input type="radio" id="gender" name="gender" value="male" required> Male<br>
+        <input type="radio" id="gender" name="gender" value="Female" required> Female<br>
+        <input type="radio" id="gender" name="gender" value="Unspecified" required> I'd Rather Not Say
+        
+        <select name="Age">
+            <option value="18-25">18-25</option required>
+            <option value="26-35">26-35</option required>
+            <option value="35-45">35-45</option required>
+            <option value="46+">46+</option required>
+        </select>
+        
+        <label>Interests</label>
+        <input type="checkbox" id="interests" name="interest1" value="video_games">Video Games<br>
+        <input type="checkbox" id="interests" name="interest2" value="volunteering">Volunteering<br>
+        <input type="checkbox" id="interests" name="interest3" value="shopping">Shopping<br>
+        <input type="checkbox" id="interests" name="interest4" value="hunting">Hunting<br>
+        <input type="checkbox" id="interests" name="interest5" value="exercising">Exercising<br>
+        <input type="checkbox" id="interests" name="interest6" value="traveling">Traveling
+        
+        <label>Contribution Amount $</label>
+        <input type="number" id="contribution" name="quantity" min="0" max="100000000" value="0">
+        
+        <label>Sign Up For Our Mailing List?</label>
+        <input type="checkbox" id="mailing_list" name="mailing_list" value="yes" checked>
+        
+        <label>Comments:</label>
+        <textarea rows="4" cols="50">
+        </textarea>
+        
+        <button>Submit</button>
+        
+        
+        
+        </form>
+    </body>
+</html>
