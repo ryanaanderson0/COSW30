@@ -11,5 +11,12 @@
     $interests= $_POST ['interests'];
     $contribution = $_POST ['quantity'];
     $mailing_list = $_POST ['mailing_list'];
+    
+    
+    echo "<h1> Thank you $first_name for completing the survey! </h1>";
+    echo " First name: $first_name ";
+    echo " Last name: $last_name ";
+    
+    
 
 ?>
