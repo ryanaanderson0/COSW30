@@ -22,7 +22,7 @@
     
     //checkbox foreach loop
     foreach ($_POST["interest"] as $interest){
-    echo "Interests: $interest";
+    echo "$interest";
     }
     foreach($_POST["age"] as $age){
         echo " Age: $age <br>";
