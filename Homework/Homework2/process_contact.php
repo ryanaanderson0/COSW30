@@ -7,8 +7,8 @@
     $email = $_POST ['email'];
     $gender = $_POST ['gender'];
     $first_name = $_POST ['first_name'];
-    foreach ($_POST ["age"] as $age);
-    foreach ($_POST["interest"] as $interest);
+    // foreach ($_POST ["age"] as $age);
+    // foreach ($_POST["interests"] as $interest)
     
     $quantity = $_POST ['quantity'];
     $mailing_list = $_POST ['mailing_list'];
@@ -20,6 +20,12 @@
     echo " Last name: $last_name <br>";
     echo " Email: $email <br> ";
     echo " Gender: $gender <br> ";
+    
+    //checkbox foreach loop
+    foreach ($_POST["interests"] as $interest){
+    echo "<p>$interest</p>";
+    }
+    
     echo " Age: $age <br>";
     echo " Interests: $interest <br> ";
     echo " Contribution: $quantity<br> ";
