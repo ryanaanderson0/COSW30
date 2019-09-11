@@ -25,15 +25,13 @@
     echo "$interest ";
     }
     
-    //select foreach loop for age
-    if(isset($_POST['age'])){
-    foreach ($_POST['age'] as $age)
-    {
-    echo "Age: $age";
-    }
+    if(isset($_POST['submit'])){
+$age = $_POST['age'];  // Storing Selected Value In Variable
+echo "Age: $age";  // Displaying Selected Value
+}
     
     echo " Contribution: $quantity<br> ";
     echo " Mailing list: $mailing_list <br> ";
     echo " Comments: $comments";
-
-?>
+    
+    ?>
