@@ -20,17 +20,20 @@
     echo " Email: $email <br> ";
     echo " Gender: $gender <br> ";
     
-    //checkbox foreach loop
+    //checkbox foreach loop for interests
     foreach ($_POST["interest"] as $interest){
-    echo "$interest";
+    echo "$interest ";
     }
-    foreach($_POST["age"] as $age){
-        echo " Age: $age <br>";
+    
+    //select foreach loop for age
+    if(isset($_POST['age'])){
+    foreach ($_POST['age'] as $age)
+    {
+    echo "Age: $age";
     }
-    echo " Interests: $interest <br> ";
+    
     echo " Contribution: $quantity<br> ";
     echo " Mailing list: $mailing_list <br> ";
     echo " Comments: $comments";
-    
 
 ?>
