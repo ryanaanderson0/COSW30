@@ -23,8 +23,10 @@
                 font-family: 'Varela Round' , sans-serif;
             }
             
-            label, select{
-                margin-top: 4px;
+            .title{
+                 margin-top: 4px;
+                 font-size: 3em;
+                 color: #F4F1E0;
             }
         </style>
     </head>
@@ -33,21 +35,21 @@
         
         <form method="POST" action="process_contact.php">
             
-        <label>First Name:</label> 
+        <label class="title">First Name:</label> 
         <input type="text" id="first_name" name="first_name" required><br>
         
-        <label>Last Name:</label> 
+        <label class="title">Last Name:</label> 
         <input type="text" id="last_name" name="last_name" required> <br>
         
-        <label>Email Address:</label> 
+        <label class="title">Email Address:</label> 
         <input type="email" id="email" name="email" required> <br>
         
-        <label>Gender:</label> <br>
+        <label class="title">Gender:</label> <br>
         <input type="radio" id="gender" name="gender" value="male" required> Male<br>
         <input type="radio" id="gender" name="gender" value="Female" required> Female<br>
         <input type="radio" id="gender" name="gender" value="Unspecified" required> I'd Rather Not Say<br>
         
-        <label> Age: </label><br>
+        <label class="title"> Age: </label><br>
         <select id="age" name="age" required> <br>
             <option value="18-25">18-25</option> <br>
             <option value="26-35">26-35 </option> <br>
@@ -55,7 +57,7 @@
             <option value="46+">46+</option> <br>
         </select><br>
         
-        <label>Interests:</label><br>
+        <label class="title">Interests:</label><br>
         <input type="checkbox" id="interests" name="interest[]" value="video_games">Video Games<br>
         <input type="checkbox" id="interests" name="interest[]" value="volunteering">Volunteering<br>
         <input type="checkbox" id="interests" name="interest[]" value="shopping">Shopping<br>
@@ -63,13 +65,13 @@
         <input type="checkbox" id="interests" name="interest[]" value="exercising">Exercising<br>
         <input type="checkbox" id="interests" name="interest[]" value="traveling">Traveling<br>
         
-        <label>Contribution Amount $</label>
+        <label class="title">Contribution Amount $</label>
         <input type="number" id="contribution" name="quantity" min="0" max="100000000" value="0"><br>
         
-        <label>Sign Up For Our Mailing List?</label>
+        <label class="title">Sign Up For Our Mailing List?</label>
         <input type="checkbox" id="mailing_list" name="mailing_list" value="yes" checked><br>
         
-        <label>Comments:</label><br>
+        <label class="title">Comments:</label><br>
         <textarea rows="4" cols="50" name="comments">
         </textarea>
         
