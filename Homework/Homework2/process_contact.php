@@ -20,7 +20,10 @@
     echo " Email: $email <br> ";
     echo " Gender: $gender <br> ";
     
+    
     //checkbox foreach loop for interests
+    echo "Interests: <br>";
+    
     foreach ($_POST["interest"] as $interest){
     echo " $interest <br>";
     }
