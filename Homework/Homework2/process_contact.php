@@ -22,12 +22,12 @@
     
     //checkbox foreach loop for interests
     foreach ($_POST["interest"] as $interest){
-    echo "$interest ";
+    echo "$interest <br>";
     }
     
     if(isset($_POST['age'])){
 $age = $_POST['age'];  // Storing Selected Value In Variable
-echo "You have selected :" .$age;  // Displaying Selected Value
+echo "Age: .$age <br>";  // Displaying Selected Value
 }
 
     echo " Contribution: $quantity<br> ";
