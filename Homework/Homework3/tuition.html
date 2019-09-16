@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title> Homework 3: Tuition Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            text-align: center;
+        }
+        
+        h1{
+            font-size: 3em;
+        }
+        
+        #header-white{
+            color: white;
+        }
+        
+        .header{
+            background-color: black;
+            padding-bottom: 10px;
+            margin-bottom:  5%;
+            height: 400px;
+        }
+        
+        form{
+            background-color: #DA281C; 
+            width: 75%;
+            padding-top: 100px;
+            padding-bottom: 200px;
+            margin: 20px auto 20% auto;
+            
+        }
+        
+        h2, label{
+            font-size: 2em;
+        }
+        
+        .option{
+            padding: 10px;
+            margin: 50px 0 50px 0;
+            font-size: 1.5em;
+        }
+        
+        button{
+            font-size: 1.5em;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.svg" height="250" width="300" alt="LBCC logo"></img>
+        <h1 id="header-white">LBCC Tuition Calculator</h1>
+    </div>
+    
+    <form method="POST" action="process_tuition.php">
+        
+    <h2> Fill out this form to calculate the cost of tuition.</h2>
+    
+    <!--Resident or non-resident-->
+    
+    <label>Are you a California resident? </label>
+        <select id="resident" name="resident" class="option"><br>
+            <option value="46"> Yes </option>
+            <option value="265"> No </option>
+        </select> <br>
+        
+  <!--# of unit dropdown form  -->
+  
+        <label> Number of Units:</label>    
+        <select id="units" name="units" class="option" required> 
+            <option value="1" name="units[]"> 1 </option> <br>
+            <option value="2" name="units[]"> 2 </option> <br>
+            <option value="3" name="units[]"> 3 </option> <br>
+            <option value="4" name="units[]"> 4 </option> <br>
+            <option value="5" name="units[]"> 5 </option> <br>
+            <option value="6" name="units[]"> 6 </option> <br>
+            <option value="7" name="units[]"> 7 </option> <br>
+            <option value="8" name="units[]"> 8 </option> <br>
+            <option value="9" name="units[]"> 9 </option> <br>
+            <option value="10" name="units[]"> 10 </option> <br>
+            <option value="11" name="units[]"> 11 </option> <br>
+            <option value="12" name="units[]"> 12 </option> <br>
+            <option value="13" name="units[]"> 13 </option> <br>
+            <option value="14" name="units[]"> 14 </option> <br>
+            <option value="15" name="units[]"> 15 </option> <br>
+            <option value="16" name="units[]"> 16 </option> <br>
+            <option value="17" name="units[]"> 17 </option> <br>
+            <option value="18" name="units[]"> 18 </option> <br>
+            <option value="19" name="units[]"> 19 </option> <br>
+            <option value="20" name="units[]"> 20 </option> <br>
+            <option value="21" name="units[]"> 21 </option> <br>
+        </select><br>    
+    
+        <!--Mandatory fee -->
+        
+        <h2> NOTE- All students must pay a mandatory student health fee of $20<h2>
+        
+        <!--Optional Fees-->
+        
+        <h2> Optional Fees:</h2>
+        
+        <!--College Services Card-->
+        
+        <label>College Services Card:</label>
+        <select id="services_card" name="services_card" class="option"><br>
+            <option value="20"> Yes [ $20 ]</option>
+            <option value="0"> No [ $0 ]</option>
+        </select> <br>
+        
+        <!--Parking Permit-->
+        
+        <label>Parking Permit:</label>
+        <select id="parking_permit" name="parking_permit" class="option"><br>
+            <option value="30" name="parking_permit"> Yes [ $30 ]</option>
+            <option value="0" name="parking_permit"> No [ $0 ]</option>
+        </select> <br>
+        <br>
+        <button> Submit </button>
+        
+        
+    </form>
+    
+    <img src="viking.PNG" alt="red and white viking image" id="viking"></img>
+    
+    
+</body>
+</html>
