@@ -7,7 +7,9 @@
 
 // process data
 
-    if (!empty)$quote)) {
+    echo "<h1> This is your original quote: $quote </h1>";
+
+    if (!empty($quote)) {
         echo "<h2> Your original list is: </h2>";
     }
     
