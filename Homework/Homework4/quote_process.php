@@ -2,7 +2,7 @@
 
 // capture data
 
-    $quote = $_POST ['quote'];
+    $quote = $_POST ['MyArray[]'];
 
 
 // process data
