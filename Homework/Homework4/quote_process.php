@@ -15,12 +15,12 @@
     if (!empty($value)) {
         echo "<h2> Please enter a quote </h2>";
     }
-    elseif ($value > 5) {
+    else  {
         echo "<h2> This is your original quote : $value </h2> <br>";
     }
     
    
     echo "<h2> The total word count of your list is: </h2> <br>";
-    echo count ($value);
+    echo count($value) ;
 
 ?>
