@@ -6,18 +6,21 @@
 
 
 // process data
-
-    echo "<h1> This is your original quote: </h1> <p> $quote </p>";
-
-    if (!empty($quote)) {
-        echo "<h2> Your quote as a list: </h2>";
-    }
-    
-    foreach($quote_explode as $value) {
+     foreach($quote as $value) {
         echo "<p> $value </p>";
     }
     
-    echo "<h2> The total word count of your list is: </h2>";
-    echo "<p>" .count($quote_explode) ."</p>";
+    // echo "<h1> This is your original quote: </h1> <p> $value</p>";
+
+    if (!empty($value)) {
+        echo "<h2> Please enter a quote </h2>";
+    }
+    elseif ($value > 5) {
+        echo "<h2> This is your original quote : $value </h2> <br>";
+    }
+    
+   
+    echo "<h2> The total word count of your list is: </h2> <br>";
+    echo count ($value);
 
 ?>
