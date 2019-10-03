@@ -25,9 +25,10 @@
                 font-size: 1.5em;
             }
 
-            button{
-                background-color:
+            .btn{
+                background-color: #9CC5A1;
             }
+
 
             .body_text {
                 background-color:#374741;
@@ -125,7 +126,7 @@ echo "<h1> The number of words in your new quote is: </h1>" ;
 
 ?>
 
-        <button><a href="quote.html">Input another quote!</a></button>
+        <button class="btn"><a href="quote.html">Input another quote!</a></button>
     </div>
     </body>
 </html>

@@ -13,6 +13,12 @@
                 text-shadow: 4px 4px #216869;
             }
 
+            h2{
+                text-align: center;
+                font-family: 'Contrail One', cursive;
+                font-size: 1.5em;
+                color: white;
+            }
             p{
                 text-align: center;
                 color: #9CC5A1;
@@ -20,20 +26,50 @@
                 font-size: 1.5em;
             }
 
-            button{
-                background-color:
+
+            form{
+               padding-top: 100px;
+               padding-bottom: 100px;
+               width: 50%;
+               margin: 0 auto;
             }
 
-            .body_text {
+            .btn{
+                padding-top: 30px;
+                margin-left: 35%;
+                width: 100%;
+            }
+
+            button{
+                padding: 5px;
+                width: 30%;
+                background-color: #EFC4BC;
+                font-family: 'Staatliches', cursive;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+            }
+            input.txt_input{
+                display: block;
+                margin: 0 auto;
+                background-color: #9CC5A1;
+                padding: 10px;
+                font-family: 'Staatliches', cursive;
+                letter-spacing: 1px;
+                font-size: 1em;
+                width: 60%;
+            }
+
+
+             .body_text {
                 background-color:#374741;
                 width: 75%;
-                height: 50%;
                 margin: 0 auto;
                 padding-top: 30px;
             }
             body{
                 background-color: #E5DFD9;
             }
+
         </style>
     </head>
     <div class="body_text">
@@ -42,13 +78,14 @@
 
         <form method="POST" action="quote_process.php">
 
-         <input type="text" name="quote" required> Input Quote <br>
+         <input type="text" name="quote" class="txt_input" required> <h2> Please Input Your Favorite Quote</h2>
 
+        <div class="btn">
          <button>Submit</button>
-
-
+        </div>
 
         </form>
+
     </body>
     </div>
 </html>
