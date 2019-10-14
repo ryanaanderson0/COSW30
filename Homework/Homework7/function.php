@@ -1,3 +1,4 @@
+<html>
 <form method="POST" action="function.php">
     <h2>Number 1:</h2>
     <input type="number" name="num1"/>
@@ -7,6 +8,7 @@
 
     <br><input type="submit" value="CALCULATE"><br>
 </form>
+</html>
 
 <?php
 function addTotal() {
