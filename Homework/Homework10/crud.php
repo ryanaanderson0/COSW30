@@ -5,16 +5,29 @@ include('database.php');
 *   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
 *   NEW USER INTO THE DATABASE
 */
+
+
+
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-}
+
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+
+$insert_query = "INSERT INTO USER_ANDERSON (first_name, last_name, email, password)
+        VALUES ('$first_name', '$last_name', '$email', '$password')
+        ";
+
+$result = mysqli_query($connection, $insert_query);
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
 // Create your query
-$query = "INSERT INTO USER_ANDERSON (first_name, last_name, email, password)
-        VALUES ('$firstName', '$lastName', '$email', '$password')
-
-        SELECT * FROM USER_ANDERSON";
+$query = "SELECT * FROM USER_ANDERSON;
+        ";
 // Run your query
 $result = mysqli_query($connection, $query);
 // Check if the database returned anything
@@ -24,7 +37,7 @@ if($result) {
     $rows = mysqli_fetch_all($result);
 } else {
     // Output an error
-    echo "There has been an error connecting to the database";
+}
 }
 ?>
 
@@ -67,20 +80,16 @@ if($result) {
             </tr>
         </thead>
         <tbody>
-            <tr>
+
             <?php // You will be adding a forEach loop here to output the users
             foreach($rows as $row){
-                echo "<td>".$row['first_name']. "</td>";
+                echo "<tr><td>".$row['first_name']. "</td>";
                 echo "<td>".$row['last_name']. "</td>";
                 echo "<td>".$row['email']. "</td>";
-                echo "<td>".$row['password']. "</td>";
+                echo "<td>".$row['password']. "</td></tr>";
 
             }
-            else {
-                echo $rows;
-            }
             ?>
-            </tr>
         </tbody>
     </table>
 </body>
