@@ -46,7 +46,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 *   QUERY THE DATABASE FOR THE USER THAT HAS THE GET ID
 */
 // Create your query
-$query = "SELECT * FROM USER WHERE user_id = $id";
+$query = "SELECT * FROM USER_ANDERSON WHERE user_id = $id";
+
 // Run your query
 $result = mysqli_query($connection, $query);
 // Check if the database returned anything
@@ -62,6 +63,7 @@ if($result) {
 
 } else {
     // Output an error message
+    echo '<p>No results</p>';
 }
 
 ?>

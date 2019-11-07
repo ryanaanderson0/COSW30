@@ -48,24 +48,25 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         ";
 
     $result = mysqli_query($connection, $insert_query);
-    /*
-    *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
-    */
-    // Create your query
-    $query = "SELECT * FROM USER_ANDERSON;
-            ";
-    // Run your query
-    $result = mysqli_query($connection, $query);
-    // Check if the database returned anything
 
-    if($result) {
-        // If the database query was successful, store
-        // the array of users into a variable
-        $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    } else {
-        // Output an error
-        $error[] = 'Woops, did not enter data into the database!';
-    }
+}
+
+/*
+*   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
+*/
+// Create your query
+$query = "SELECT * FROM USER_ANDERSON";
+// Run your query
+$result = mysqli_query($connection, $query);
+// Check if the database returned anything
+
+if($result) {
+    // If the database query was successful, store
+    // the array of users into a variable
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+} else {
+    // Output an error
+    $error[] = 'Woops, did not enter data into the database!';
 }
 ?>
 
