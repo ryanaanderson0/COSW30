@@ -63,6 +63,7 @@ if($result) {
 } else {
     // Output an error message
 }
+
 ?>
 
 <!doctype html>

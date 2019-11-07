@@ -89,7 +89,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="password">Password</label>
         <input type="password" id="password" name="password"><br>
 
-        <label for="password">Retype Password</label>
+        <label for="confirm_password">Retype Password</label>
         <input type="password" id="comfirm_password" name="confirm_password"><br>
 
         <!--Add a second password input so the user has to retype their password -->
