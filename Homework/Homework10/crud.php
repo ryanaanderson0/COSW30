@@ -103,12 +103,12 @@ if($result) {
         <input type="email" id="email" name="email" value="<?php echo $email; ?>"><br>
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" value="<?php echo $password; ?>"><br>
+        <input type="password" id="password" name="password" ><br>
 
    <!--Add a second password input so the user has to retype their password -->
 
         <label for="confirm_password">Retype Password</label>
-        <input type="password" id="comfirm_password" name="confirm_password" value="<?php echo $confirm_password; ?>"><br>
+        <input type="password" id="comfirm_password" name="confirm_password"><br>
 
      
 
