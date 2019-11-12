@@ -11,45 +11,60 @@ include('database.php');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $first_name       = $_POST['first_name'];
+    $last_name        = $_POST['last_name'];
+    $email            = $_POST['email'];
+    $password         = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
 
 //initialize error array
 
     $error = [];
 
-//Verify that the form is filled out/not empty
-
-    if(empty($_POST['first_name'])) {
-        $error[] = 'You forgot to enter your first name!';
-    }
-    else {
-        $first_name = trim($_POST['first_name']);
-    }
 
 //check if the passwords match
+   
+    //Verify that the form is filled out/not empty
+        if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($password) && ($password == $confirm_password) && ($password > 6) && ($confirm_password > 6)) {
+            
+             $insert_query = "INSERT INTO USER_ANDERSON (first_name, last_name, email, password)
+                             VALUES ('$first_name', '$last_name', '$email', '$password')";
 
-    if (!empty($_POST['password'])) {
-        if ($_POST['password'] != $_POST['confirm_password']) {
-            $error[] = 'Your passwords do not match!';
+            $result = mysqli_query($connection, $insert_query);
+
+            echo '<p> Congrats! You have successfully registered! </p>';
         }
-        else{
-        $password = trim($_POST['password']);
+        
+        else {
+            echo '<p>Error submitting registration</p>';
         }
-    }else{
-        $error[] = 'You forgot to enter a password!';
-    }
 
+        if($password !== $confirm_password) {
+            echo '<p> The passwords do not match </p>';
+        }
 
-    $insert_query = "INSERT INTO USER_ANDERSON (first_name, last_name, email, password)
-        VALUES ('$first_name', '$last_name', '$email', '$password')
-        ";
-
-    $result = mysqli_query($connection, $insert_query);
-
+        if(empty($first_name)) {
+            echo '<p> Please input first name </p>';
+        }
+    
+        if($password < 6) {
+            echo '<p> password needs to be more that 5 characters </p>';
+        }
 }
+
+
+/// test
+// echo '<p> Please input your first name </p>';
+//         }
+//         else if(empty($last_name)) {
+//             echo '<p> Please input your last name </p>';
+//         }
+//         else if(empty($email)) {
+//             echo '<p> Please input your email</p>';
+//         }
+//         else if(empty($password)) {
+//             echo '<p> Please input your password </p>';
+//         }
 
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
@@ -79,21 +94,23 @@ if($result) {
     <h1>Create a New User</h1>
     <form action="crud.php" method="POST">
         <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name"><br>
+        <input type="text" id="first_name" name="first_name" value="<?php echo $first_name; ?>"><br>
 
         <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name"><br>
+        <input type="text" id="last_name" name="last_name" value="<?php echo $last_name; ?>"><br>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" value="<?php echo $email; ?>"><br>
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password"><br>
+        <input type="password" id="password" name="password" value="<?php echo $password; ?>"><br>
+
+   <!--Add a second password input so the user has to retype their password -->
 
         <label for="confirm_password">Retype Password</label>
-        <input type="password" id="comfirm_password" name="confirm_password"><br>
+        <input type="password" id="comfirm_password" name="confirm_password" value="<?php echo $confirm_password; ?>"><br>
 
-        <!--Add a second password input so the user has to retype their password -->
+     
 
         <button>Register</button>
     </form>

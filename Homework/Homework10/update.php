@@ -7,7 +7,6 @@ include('database.php');
 */
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
-    echo $id;
 } else {
     // redirect to crud.php
     header('Location: crud.php');
@@ -17,6 +16,7 @@ if(isset($_GET['id'])) {
 *   AFTER SUBMITTING THE UPDATE FORM, UPDATE THE INFO
 *   IN THE DATABASE
 */
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $first_name = $_POST['first_name'];
     $last_name  = $_POST['last_name'];
@@ -28,19 +28,46 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     //     $error[] = 'error message';
     // }
 
-    if(empty($errors)) {
-    // If they aren't empty, create and run your query
-    $update_query = "UPDATE USER_ANDERSON
-                     SET first_name = '$first_name',
-                         last_name = '$last_name',
-                         email = '$email',
-                         password = '$password'
-                     WHERE user_id = $id";
+
+    
+    if(empty($first_name)) {
+        echo '<p> Please enter your first name.</p>';
+    } 
+    else if (empty($last_name)) {
+        echo '<p> Please enter your last name</p>';
+    }
+    else if (empty($email)) {
+        echo '<p> Please enter your email</p>';
+    }
+    else if (empty($password)) {
+        echo '<p> Please enter your password</p>';
+    }
+        else{
+    
+        // If they aren't empty, create and run your query
+        $update_query = "UPDATE USER_ANDERSON
+                        SET first_name = '$first_name',
+                            last_name = '$last_name',
+                            email = '$email',
+                        password = '$password'
+                        WHERE user_id = $id";
+
+         $result = mysqli_query($connection, $update_query);
+    }
+
     // Check if the database returned anything
         // If the UPDATE query was successful, redirect to
         // the crud.php page
         // Else, output an error message
-    }
+
+        if ($result) {
+            echo '<p> Congrats! The update was successful! </p>';
+            header('Location: crud.php');
+            exit;
+        }
+        else {
+            echo '<p> Error! the update was not successful </p>';
+        }
 }
 /*
 *   QUERY THE DATABASE FOR THE USER THAT HAS THE GET ID
@@ -55,7 +82,6 @@ if($result) {
     // If the database query was successful, store
     // the users information into a variable
     $user = mysqli_fetch_assoc($result);
-    print_r($user);
     $first_name = $user['first_name'];
     $last_name  = $user['last_name'];
     $email      = $user['email'];
